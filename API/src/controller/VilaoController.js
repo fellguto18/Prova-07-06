@@ -18,10 +18,8 @@ server.post('/vilao', async (req, resp) => {
         if(!novoVilao.poder == undefined){
             throw new Error('Campo Super-Poder é obrigatorio!');
         }
-
-
         const vilaoInserido = await inserirVilao(novoVilao)
-        resp.send(vilaoInserido)
+        resp.status(200).send()
     }
     catch(err){
         resp.status(400).send({

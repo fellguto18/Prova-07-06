@@ -5,7 +5,7 @@ export async function inserirVilao(vilao){
     `INSERT INTO tb_vilao (nm_vilao, ds_maldades, bt_super_poder)
                  VALUES (?, ?, ?)`;
 
-    const[resposta] = await con.query(comando, [vilao,vilao.nome,vilao.maldades,vilao.poder]);
+    const[resposta] = await con.query(comando, [vilao.nome,vilao.maldades,vilao.poder]);
     vilao.id = resposta.insertId;
 
     return resposta.affectedRows;
