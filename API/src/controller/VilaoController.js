@@ -15,7 +15,7 @@ server.post('/vilao', async (req, resp) => {
         if(!novoVilao.maldades){
             throw new Error('Maldades do vilão é obrigatorio!');
         }
-        if(!novoVilao.super_poder == undefined){
+        if(!novoVilao.poder == undefined){
             throw new Error('Campo Super-Poder é obrigatorio!');
         }
 
